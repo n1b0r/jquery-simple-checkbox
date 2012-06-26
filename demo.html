@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>demo page</title>
+		<link rel="stylesheet" href="jquery.checkbox.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="jquery.checkbox.js"></script>
+	</head>
+
+	<body>
+		<input type="checkbox" id='chk1'/>
+		<input type="checkbox" id='chk2'/>	
+		<input type="checkbox"/>		
+		<script type="text/javascript">
+			$(document).ready(function(event) {
+				$("#chk1").checkbox()
+				$('#chk2').checkbox({
+					'on_text': ":)",
+					'off_text' : ":("
+				})
+			});
+		</script>
+	</body>
+</html>
