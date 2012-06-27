@@ -25,14 +25,14 @@
     	$(checkbox).change(function() {
     		if ($(this).is(':checked')) {
        			checkbox_wrapper
-    				.css({background: "url('images/on.png')"})
+    				.css({background: "url('"+settings.on_image+"')"})
 					.find('.jquery_checkbox_text')
 						.removeClass('jquery_checkbox_off')
 						.addClass('jquery_checkbox_on')
 						.html(settings.on_text)
     		} else {
     			checkbox_wrapper
-    				.css({background: "url('images/off.png')"})
+    				.css({background: "url('"+settings.off_image+"')"})
 	    			.find('.jquery_checkbox_text')
 	    				.removeClass('jquery_checkbox_on')
 						.addClass('jquery_checkbox_off')
