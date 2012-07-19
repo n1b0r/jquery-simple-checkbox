@@ -1,3 +1,7 @@
+// written by Robin Lucbernet <niborEH@gmail.com> - nibor.me
+// jquery.checkbox.js
+// Transform a regular checkbox input into a two state slider.
+
 (function( $ ){
 
   $.fn.checkbox = function( options ) {  
@@ -16,14 +20,17 @@
     	var checkbox = this
     	var checkbox_wrapper = $('<span class="jquery_checkbox"><span class="jquery_checkbox_text"></span></span>')
 
+      // hide the regular checkbox and insert our wrapper
     	$(checkbox).css({position: 'absolute', zIndex: -1, visibility: 'hidden'}).after(checkbox_wrapper)
     	
     	checkbox_wrapper.click(function(event) {
-    		$(checkbox).trigger('click')
+          $(checkbox).trigger('click')
+          event.preventDefault();
+          event.stopPropagation();
     	});
 
     	$(checkbox).change(function() {
-    		if ($(this).is(':checked')) {
+        if ($(this).is(':checked')) {
        			checkbox_wrapper
     				.css({background: "url('"+settings.on_image+"')"})
 					.find('.jquery_checkbox_text')
