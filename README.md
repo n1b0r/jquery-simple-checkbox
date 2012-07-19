@@ -4,7 +4,7 @@ jquery-simple-checkbox
 
 Transform your regular checkbox input into a two state slider.
 
-To use this script, include jquery.js, jquery.checkbox.js and jquery.checkbox.css into your <head> tag.
+To use this script, include jquery.js, jquery.checkbox.js and jquery.checkbox.css into your ``<head>`` tag.
 
 Demo file :
 <html>
